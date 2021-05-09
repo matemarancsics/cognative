@@ -1,0 +1,230 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+/** HEADER **/
+header {
+  display: flex;
+  width: 80%;
+  height: 10vh;
+  margin: auto;
+  align-items: center;
+}
+.logo-container,
+.info {
+  display: flex;
+}
+.logo-container {
+  height: 200%;
+  flex: 1;
+}
+.info {
+  height: 50%;
+  flex: 1;
+  justify-content: flex-end;
+}
+.info img {
+  width: 60%;
+}
+
+/** MAIN **/
+.screen {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+  flex: 1;
+}
+.intro {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+.intro-text h1 {
+  font-size: 60px;
+  font-weight: 500;
+  background: linear-gradient(to right, #3b5885, #87c1e2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intro-text p {
+  margin-top: 5px;
+  font-size: 22px;
+  color: #585772;
+}
+.games {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.harmony,
+.story,
+.etch,
+.fauxpas {
+  margin: 0px 20px 0px 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  cursor: pointer;
+  border: none;
+  display: block;
+  background: #eef7fd;
+  text-align: center;
+  color: #3b5885;
+  font-size: 18px;
+  padding-top: 65px;
+  text-decoration: none;
+}
+.round-button {
+  width: 20%;
+  margin: 0px 20px 0px 0px;
+  text-align: center;
+}
+.round-button-circle {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+
+  background: #eef7fd;
+  box-shadow: 0 0 3px gray;
+}
+.round-button-circle:hover {
+  background: #30588e;
+}
+.round-button a {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  line-height: 1em;
+  margin-top: -0.5em;
+
+  text-align: center;
+  color: #87c1e2;
+  font-family: Verdana;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+.back_0 {
+  position: absolute;
+  height: 50%;
+  bottom: 70%;
+  left: 80%;
+  z-index: -1;
+}
+.back_1 {
+  position: absolute;
+  top: 80%;
+  right: 40%;
+  z-index: -1;
+  opacity: 0.5;
+  height: 60%;
+}
+.back_2 {
+  position: absolute;
+  top: 10%;
+  right: 60%;
+  z-index: -1;
+  opacity: 0.4;
+}
+.back_3 {
+  position: absolute;
+  height: 40%;
+  top: 65%;
+  right: 8%;
+  z-index: -1;
+}
+.back_4 {
+  position: absolute;
+  height: 60%;
+  top: 0%;
+  right: 25%;
+  z-index: -1;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1040px) {
+  .screen {
+    flex-direction: column;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    min-height: 40vh;
+  }
+  .games {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .screen {
+    min-height: 130vh;
+  }
+  .games {
+    flex-direction: column;
+    position: absolute;
+    top: 13%;
+    left: 40%;
+  }
+  .harmony,
+  .story,
+  .etch,
+  .fauxpas {
+    margin-bottom: 10px;
+  }
+  .round-button {
+    margin-bottom: 5px;
+  }
+  .intro {
+    position: absolute;
+    bottom: 90%;
+  }
+  .intro-text h1 {
+    font-size: 40px;
+  }
+  .intro-text p {
+    font-size: 18px;
+  }
+  .round-button a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .intro-text p {
+    margin-bottom: 10px;
+  }
+  .intro-text h1 {
+    font-size: 25px;
+  }
+  .intro-text p {
+    font-size: 16px;
+    color: #3e5a85;
+  }
+  .round-button {
+    margin-bottom: 5px;
+  }
+  .round-button a {
+    font-size: 8px;
+  }
+  .back_1,
+  .back_2 {
+    display: none;
+  }
+}

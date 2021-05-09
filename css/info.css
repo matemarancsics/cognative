@@ -1,0 +1,48 @@
+.screen_home {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+  flex: 1;
+  background-color: rgb(242, 250, 253);
+  margin-bottom: 10px;
+}
+.info {
+  align-items: center;
+  position: absolute;
+  width: 30%;
+  margin-left: 25%;
+}
+.info p {
+  font-size: 110%;
+}
+.cancel-info {
+  margin-top: 5%;
+  width: 100%;
+  border: none;
+  background-color: rgb(242, 250, 253);
+}
+.cancel-info img {
+  width: 15%;
+  margin-left: 35%;
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 510px) {
+  .info {
+    margin-left: 15%;
+    width: 50%;
+  }
+  .info h1,
+  .info h2,
+  .info h3 {
+    font-size: 80%;
+  }
+  .cancel-info {
+    margin-left: 15%;
+  }
+  .info p {
+    font-size: 70%;
+  }
+}

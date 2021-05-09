@@ -1,0 +1,250 @@
+.screen_home,
+.screen_game {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+  flex: 1;
+  background-color: rgb(242, 250, 253);
+  margin-bottom: 10px;
+}
+.title {
+  position: absolute;
+  top: 15%;
+  width: 80%;
+  padding: 0% 5% 0% 5%;
+}
+.title h2 {
+  color: #3b5885;
+}
+.cancel {
+  position: absolute;
+  width: 20%;
+  top: 10%;
+  left: 85%;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+.cancel-link {
+  width: 100%;
+  border: none;
+  background-color: rgb(242, 250, 253);
+}
+.cancel-link img {
+  width: 15%;
+}
+.activate {
+  position: absolute;
+  top: 78%;
+  right: 10%;
+  width: 8%;
+  align-items: center;
+}
+.active-img {
+  border: none;
+  background-color: rgb(242, 250, 253);
+  outline: none;
+  cursor: pointer;
+}
+.active-img img {
+  width: 80%;
+}
+.open-menu {
+  position: absolute;
+  bottom: 12%;
+  left: 82%;
+  background-color: crimson;
+  margin-bottom: 1%;
+}
+.cta-next {
+  background: #00d800;
+  width: 100%;
+  cursor: pointer;
+  font-size: 100%;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: 20% 30% 20% 30%;
+}
+.next-button {
+  background: #00d800;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  font-size: 100%;
+  padding: 2% 2% 2% 2%;
+}
+
+/****************
+
+    DRAG & DROP
+
+*****************/
+.app {
+  display: flex;
+  flex-flow: column;
+
+  width: 100%;
+}
+.lists {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow-x: scroll;
+}
+.lists .list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  flex: 1;
+  overflow: scroll;
+
+  width: 100%;
+  max-width: 43%;
+  height: 100%;
+  min-height: 200px;
+  max-height: 250px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  padding: 8px;
+  transition: all 0.2s linear;
+}
+#picked {
+  position: absolute;
+  bottom: 12%;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+
+  width: 100%;
+  max-width: 70%;
+  height: 15%;
+  min-height: 15%;
+  max-height: 20%;
+
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 15px;
+  padding: 8px;
+  transition: all 0.2s linear;
+}
+.lists .list .list-item {
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 4px 0px;
+  max-height: 500px;
+  margin-right: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+#item {
+  width: 100%;
+}
+#picked > #item {
+  max-width: 20%;
+}
+
+/****************
+
+      GAME
+
+*****************/
+.game {
+  display: flex;
+  flex: 1;
+}
+.game img {
+  width: 100%;
+}
+.next {
+  position: absolute;
+  bottom: 11%;
+  left: 81%;
+}
+.cta-next {
+  background: #00d800;
+  width: 150%;
+  cursor: pointer;
+  font-size: 100%;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: 20% 30% 20% 30%;
+  outline: none;
+}
+.img-viewer img {
+  position: absolute;
+  top: 20%;
+  left: 23%;
+  width: 55%;
+  max-height: 65%;
+}
+
+@media screen and (max-width: 1024px) {
+  .back_1,
+  .back_2,
+  .back_0 {
+    display: none;
+  }
+  .title h2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .lists .list {
+    grid-template-columns: repeat(1, auto);
+  }
+  #picked {
+    width: 65%;
+  }
+  #picked > #item {
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .screen_home,
+  .screen_game {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+  header {
+    display: none;
+  }
+  .back_1,
+  .back_2,
+  .back_3,
+  .back_4,
+  .back_0 {
+    display: none;
+  }
+  .cancel-link img {
+    width: 30%;
+  }
+  .title h2 {
+    font-size: 14px;
+  }
+  .title,
+  .cancel {
+    top: 3%;
+  }
+  .title {
+    width: 90%;
+  }
+  .active-img img {
+    width: 70%;
+  }
+  #picked {
+    bottom: 2%;
+  }
+  .activate {
+    width: 20%;
+    top: 90%;
+    right: 2%;
+  }
+}

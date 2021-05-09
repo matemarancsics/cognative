@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Mesevilág</title>
+    <!--CSS-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/background.css" />
+    <link rel="stylesheet" href="../../css/story-1.css" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="../js/first.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="../../img/logo_2.png"
+          alt="logo"
+          onclick="location.href='../../index.html';"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="screen_home">
+        <div class="title">
+          <h2>
+            <em
+              >Add meg kérlek gyermeked nevét és válassz neki egy avatart, mert
+              ez a mese most róla fog szólni!</em
+            >
+          </h2>
+        </div>
+        <div class="cancel">
+          <a href="./menu.html" class="cancel-link"
+            ><span><img src="../img/cancel.png" alt="" /></span
+          ></a>
+        </div>
+
+        <div id="form" class="form">
+          <div class="name">
+            <h3>Gyermek neve:</h3>
+            <input
+              id="name-input"
+              class="name-input"
+              type="text"
+              value=""
+              required
+            />
+          </div>
+
+          <h3>Válaszd ki az avatarodat!</h3>
+          <div class="avatar">
+            <div id="avatar" class="avatar">
+              <button id="left" class="left">
+                <span><img src="../img/left.png" alt="left-arrow" /></span>
+              </button>
+              <img
+                id="avatar-img"
+                class="avatar-img"
+                src="../img/player_1.png"
+                alt=""
+              />
+              <button id="right" class="right">
+                <span><img src="../img/right.png" alt="right-arrow" /></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activate">
+          <button id="activate" class="active-img">
+            <span><img src="../img/active.png" alt="" /></span>
+          </button>
+        </div>
+
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            Ma elmeséljük együtt gyermeked egy napját. ​Én adom a képeket, ti
+            pedig ennek alapján meséljétek el, mi történt gyermekeddel ma, de
+            használjátok a fantáziátokat is nyugodtan, ne féljetek elrugaszkodni
+            a valóságtól, annál izgalmasabb és szerethetőbb lesz a történet.​
+            ​Ha elakadtok, a SEGÍTSÉG gombra​ kattintva mutatok nektek olyan
+            mondatkezdeteket, amelyek segítenek a továbbhaladásban. Vágjunk is
+            bele!
+            <div class="controls">
+              <button id="modal-next" class="next-button">Tovább</button>
+            </div>
+          </div>
+        </div>
+        <div id="overlay"></div>
+      </section>
+
+      <section id="game" class="screen_game" style="display: none">
+        <div class="cancel">
+          <a href="./menu.html" class="cancel-link"
+            ><span><img src="../img/cancel.png" alt="" /></span
+          ></a>
+        </div>
+        <div class="app">
+          <header id="header">
+            <h1 id="img-title">Title</h1>
+          </header>
+          <div class="lists">
+            <div id="list-ctn" class="list" style="visibility: hidden"></div>
+            <div class="game">
+              <img id="img-ctn" src="" alt="" />
+            </div>
+            <div id="help-ctn" class="list" style="visibility: hidden"></div>
+          </div>
+        </div>
+
+        <div class="help">
+          <button id="help" class="cta-help">
+            <span><img src="../img/mark.png" alt="" /></span>
+          </button>
+        </div>
+
+        <div class="next">
+          <button id="img-next" class="cta-next">Tovább</button>
+        </div>
+      </section>
+
+      <img class="back_0" src="../../img/circle_1.png" alt="" />
+      <img class="back_1" src="../../img/circle_2.png" alt="" />
+      <img class="back_2" src="../../img/circle_2.png" alt="" />
+      <img class="back_3" src="../../img/tri_2.png" alt="" />
+      <img class="back_4" src="../../img/square.png" alt="" />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesevilág</title>
+    <!--CSS-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/background.css" />
+    <link rel="stylesheet" href="../../css/menu.css" />
+
+    <!-- JS -->
+    <script defer src="../js/menu.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="../../img/logo_2.png"
+          alt="logo"
+          onclick="location.href='../../index.html';"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section class="screen_home">
+        <div class="title">
+          <h2>
+            <em
+              >Az alábbi három kategóriából választhattok. Ha egyszer
+              rákoppintotok, elolvashatjátok a leírásukat és elindíthatjátok a
+              játékot. Ha kétszer, egyből megnyílik a játék.</em
+            >
+          </h2>
+        </div>
+        <div class="cancel">
+          <a href="../story.html" class="cancel-link"
+            ><span><img src="../img/cancel.png" alt="" /></span
+          ></a>
+        </div>
+
+        <div class="options">
+          <div class="option-btn">
+            <button
+              id="first"
+              class="videoPic"
+              data-modal-target="#modal1"
+              ondblclick="location.href='./first.html';"
+            >
+              Ma segítséget kérünk a mesemondáshoz!
+            </button>
+            <button
+              id="second"
+              class="videoPic"
+              data-modal-target="#modal2"
+              ondblclick="location.href='./second.html';"
+            >
+              Ma mi választjuk a meseelemeket!
+            </button>
+            <button
+              id="third"
+              class="videoPic"
+              data-modal-target="#modal3"
+              ondblclick="location.href='./third.html';"
+            >
+              Ma te adj nekünk meseelemeket!
+            </button>
+          </div>
+        </div>
+
+        <div class="modal" id="modal1">
+          <div class="modal-header">
+            <button data-close-button class="close-button">&times;</button>
+            <div class="controls">
+              <a href="./first.html" id="modal-next" class="next-button"
+                >Tovább</a
+              >
+            </div>
+          </div>
+          <div class="modal-body">
+            Gyermeked mai napját mesélhetitek el 5 kép és beépített segítő
+            mondatok használatával.
+          </div>
+        </div>
+        <div id="overlay"></div>
+
+        <div class="modal" id="modal2">
+          <div class="modal-header">
+            <button data-close-button class="close-button">&times;</button>
+            <div class="controls">
+              <a href="./second.html" id="modal-next" class="next-button"
+                >Tovább</a
+              >
+            </div>
+          </div>
+          <div class="modal-body">
+            Általatok választott képek segítségével mondhattok mesét.
+          </div>
+        </div>
+        <div id="overlay"></div>
+
+        <div class="modal" id="modal3">
+          <div class="modal-header">
+            <button data-close-button class="close-button">&times;</button>
+            <div class="controls">
+              <a href="./third.html" id="modal-next" class="next-button"
+                >Tovább</a
+              >
+            </div>
+          </div>
+          <div class="modal-body">
+            A program által generált random képekkel kell mesét alkotnotok.
+          </div>
+        </div>
+        <div id="overlay"></div>
+      </section>
+
+      <img class="back_0" src="../../img/circle_1.png" alt="" />
+      <img class="back_1" src="../../img/circle_2.png" alt="" />
+      <img class="back_2" src="../../img/circle_2.png" alt="" />
+      <img class="back_3" src="../../img/tri_2.png" alt="" />
+      <img class="back_4" src="../../img/square.png" alt="" />
+    </main>
+  </body>
+</html>

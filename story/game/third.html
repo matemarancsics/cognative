@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>Mesevilág</title>
+    <!--CSS-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/background.css" />
+    <link rel="stylesheet" href="../../css/story-3.css" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="../js/third.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="../../img/logo_2.png"
+          alt="logo"
+          onclick="location.href='../../index.html';"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="screen_home">
+        <div class="title">
+          <h2>
+            <em
+              >Most válasszátok ki, hány képet adjon nektek a gép, amiből mesét
+              alkottok majd! A csúszkát 3 és 9 között tudjátok állítani.</em
+            >
+          </h2>
+        </div>
+        <div class="cancel">
+          <a href="./menu.html" class="cancel-link"
+            ><span><img src="../img/cancel.png" alt="" /></span
+          ></a>
+        </div>
+
+        <div class="slider">
+          <span id="rangeValue">3</span>
+          <input class="range" type="range" name "" value="0" min="3" max="9" onChange="rangeSlide(this.value)"></input>
+        </div>
+
+        <div class="activate">
+          <button id="activate" class="active-img">
+            <span><img src="../img/active.png" alt="" /></span>
+          </button>
+        </div>
+      </section>
+
+      <section id="game" class="screen_game" style="display: none">
+        <div class="cancel">
+          <a href="./menu.html" class="cancel-link"
+            ><span><img src="../img/cancel.png" alt="" /></span
+          ></a>
+        </div>
+
+        <div id="img-viewer" class="img-viewer">
+          <img id="img" src="" alt="" />
+        </div>
+
+        <div class="next">
+          <button id="img-next" class="cta-next">Tovább</button>
+        </div>
+      </section>
+
+      <img class="back_0" src="../../img/circle_1.png" alt="" />
+      <img class="back_1" src="../../img/circle_2.png" alt="" />
+      <img class="back_2" src="../../img/circle_2.png" alt="" />
+      <img class="back_3" src="../../img/tri_2.png" alt="" />
+      <img class="back_4" src="../../img/square.png" alt="" />
+    </main>
+  </body>
+</html>

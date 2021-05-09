@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Össz-hang</title>
+    <!--CSS-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/background.css" />
+    <link rel="stylesheet" href="../css/harmony.css" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./harmony.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="../img/logo_2.png"
+          alt="logo"
+          onclick="location.href='../index.html';"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section id="screen-home" class="screen_home">
+        <div class="title">
+          <img class="logo" src="./img/logo.png" alt="logo" />
+          <h1 class="harmony">Össz-hang</h1>
+          <button class="exit">
+            <span
+              ><a href="../index.html"
+                ><span><img src="./img/cancel.png" alt="" /></span></a
+            ></span>
+          </button>
+        </div>
+
+        <div class="players">
+          <h2>Válassz ki egy játékost!</h2>
+          <div class="pick">
+            <div class="avatar">
+              <div id="avatar" class="avatar">
+                <button id="left-1" class="left">
+                  <span><img src="./img/left.png" alt="left-arrow" /></span>
+                </button>
+                <img
+                  id="avatar-img-1"
+                  class="avatar-img"
+                  src="./img/player_1.png"
+                  alt=""
+                />
+                <button id="right-1" class="right">
+                  <span><img src="./img/right.png" alt="right-arrow" /></span>
+                </button>
+              </div>
+            </div>
+            <div class="avatar">
+              <div id="avatar" class="avatar">
+                <button id="left-2" class="left">
+                  <span><img src="./img/left.png" alt="left-arrow" /></span>
+                </button>
+                <img
+                  id="avatar-img-2"
+                  class="avatar-img"
+                  src="./img/player_1.png"
+                  alt=""
+                />
+                <button id="right-2" class="right">
+                  <span><img src="./img/right.png" alt="right-arrow" /></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="activate">
+          <button id="active-1" class="active-1">
+            <span><img id="img-active-1" src="./img/active.png" alt="" /></span>
+          </button>
+          <button id="active-2" class="active-2">
+            <span><img id="img-active-2" src="./img/active.png" alt="" /></span>
+          </button>
+        </div>
+
+        <div class="controls">
+          <button id="info" class="info">
+            <img src="./img/info.png" alt="info" />
+          </button>
+          <button id="next-btn" class="next">
+            <span><img src="./img/next.png" alt="" /></span>
+          </button>
+        </div>
+
+        <div class="rotate">
+          <div id="rotate-img" class="light_content">
+            <img src="./img/rotate.png" alt="" />
+          </div>
+          <div id="faded" class="faded_overlay"></div>
+        </div>
+      </section>
+
+      <section id="screen-game" class="screen_game" style="display: none">
+        <div class="control-panel">
+          <button id="play" class="play">
+            <span><img src="./img/play.png" alt="" /></span>
+          </button>
+          <button id="loop" class="loop">
+            <span><img id="loop-img" src="./img/unloop.png" alt="" /></span>
+          </button>
+          <button id="cancel" class="cancel">
+            <span><img src="./img/cancel.png" alt="" /></span>
+          </button>
+        </div>
+
+        <div class="game-ctn">
+          <div id="first-ctn" class="first">
+            <span>
+              <svg id="btn-1" class="svg" height="200" width="200">
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  stroke="black"
+                  stroke-width="3"
+                  fill="red"
+                />
+              </svg>
+            </span>
+          </div>
+          <div id="second-ctn" class="second">
+            <span
+              ><svg id="btn-2" class="svg" height="200" width="200">
+                <circle
+                  cx="100"
+                  cy="100"
+                  r="80"
+                  stroke="black"
+                  stroke-width="3"
+                  fill="blue"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="popup">
+          <div id="light" class="white_content">
+            <a
+              class="popup-close"
+              href="javascript:void(0)"
+              onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"
+              ><span><img src="./img/cancel.png" alt="" /></span
+            ></a>
+            <h2>Szuper! Ügyes voltál!</h2>
+            <h3>Játszd le a következőt!</h3>
+          </div>
+          <div id="fade" class="black_overlay"></div>
+        </div>
+
+        <div class="popup">
+          <div id="light-2" class="white_content_2">
+            <a
+              class="popup-close"
+              href="javascript:void(0)"
+              onclick="document.getElementById('light-2').style.display='none';document.getElementById('fade-2').style.display='none'"
+              ><span><img src="./img/cancel.png" alt="" /></span
+            ></a>
+            <h2>Ez most nem sikerült.</h2>
+            <h3>Próbáld újra!</h3>
+          </div>
+          <div id="fade-2" class="black_overlay"></div>
+        </div>
+
+        <div class="avatars">
+          <img id="player-1" src="" alt="" />
+          <img id="player-2" src="" alt="" />
+        </div>
+
+        <div class="rotate">
+          <div id="rotate-img" class="light_content">
+            <img src="./img/rotate.png" alt="" />
+          </div>
+          <div id="faded" class="faded_overlay"></div>
+        </div>
+
+        <div class="popup">
+          <div id="light-win" class="white_content">
+            <a class="popup-close" href="./harmony.html"
+              ><span><img src="./img/cancel.png" alt="" /></span
+            ></a>
+            <h2>Gratulálok, nyertetek!</h2>
+          </div>
+          <div id="fade-win" class="black_overlay"></div>
+        </div>
+      </section>
+
+      <section id="screen-info" class="screen_info" style="display: none">
+        <div class="game-info">
+          <h1>Játékleírás</h1>
+          <br />
+          <h2>Cél</h2>
+          <p>Különböző ritmusú hangok visszajátszása közösen.</p>
+          <h2>Játék</h2>
+          <p>- play gombbal lejátssza a hangot</p>
+          <p>- x gombbal kilép az egész játékból</p>
+          <p>- újra gombbal megint lejátssza az aktuálisat</p>
+          <p>- első körben még inaktív az újrajátszás (szürke)</p>
+          <button id="cancel-info" class="cancel-info">
+            <span><img src="./img/cancel.png" alt="" /></span>
+          </button>
+        </div>
+      </section>
+
+      <img class="back_0" src="../img/circle_1.png" alt="" />
+      <img class="back_1" src="../img/circle_2.png" alt="" />
+      <img class="back_2" src="../img/circle_2.png" alt="" />
+      <img class="back_3" src="../img/tri_2.png" alt="" />
+      <img class="back_4" src="../img/square.png" alt="" />
+    </main>
+  </body>
+</html>

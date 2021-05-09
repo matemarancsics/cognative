@@ -1,0 +1,65 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+button {
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+/** HEADER **/
+header {
+  display: flex;
+  width: 80%;
+  height: 10vh;
+  margin: auto;
+  align-items: center;
+}
+.logo-container {
+  display: flex;
+  height: 200%;
+  flex: 1;
+}
+
+/* BACKGROUND */
+.back_0 {
+  position: absolute;
+  height: 50%;
+  bottom: 70%;
+  left: 80%;
+  z-index: -1;
+}
+.back_1 {
+  position: absolute;
+  top: 80%;
+  right: 40%;
+  z-index: -1;
+  opacity: 0.5;
+  height: 60%;
+}
+.back_2 {
+  position: absolute;
+  top: 10%;
+  right: 60%;
+  z-index: -1;
+  opacity: 0.4;
+}
+.back_3 {
+  position: absolute;
+  height: 40%;
+  top: 65%;
+  right: 8%;
+  z-index: -1;
+}
+.back_4 {
+  position: absolute;
+  height: 60%;
+  top: 0%;
+  right: 25%;
+  z-index: -1;
+}

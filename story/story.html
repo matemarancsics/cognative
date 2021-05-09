@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>Mesevilág</title>
+    <!--CSS-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/background.css" />
+    <link rel="stylesheet" href="../css/story.css" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./story.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="../img/logo_2.png" alt="logo" onclick="location.href='../index.html';"/>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="screen_home">
+        <div class="cancel">
+          <a href="../index.html" class="cancel-link"
+            ><span><img src="./img/cancel.png" alt="" /></span
+          ></a>
+        </div>
+          <div class="introduction">
+            <div class="intro-text">
+              <h1>Mesevilág</h1>
+              <p>A fantázia mesekönyve</p>
+            </div>
+            <div class="cta">
+              <button id="start" class="cta-start">Start</button>
+            </div>
+          </div>
+          <div class="cover">
+            <img src="./img/logo.png" alt="logo" />
+          </div>
+      </section>
+
+      <section id="intro" class="screen_intro" style="display: none">
+        <div class="cancel">
+          <a href="./story.html" class="cancel-link"
+            ><span><img src="./img/cancel.png" alt="" /></span
+          ></a>
+        </div>
+
+        <div id="skip" class="skip">
+          <button class="skip-button" data-modal-target="#modal"><span><img src="./img/next-button.png" alt="" /></span</button>
+        </div>
+
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="title">Demo átugrása</div>
+            <button data-close-button class="close-button">&times;</button>
+          </div>
+          <div class="modal-body">
+            Biztosan át akarjátok ugrani a demót?​ ​Ha ezt át is ugorjátok, a ráhangolódásra ügyeljetek!
+            <div class="controls">
+              <a href="./game/menu.html" id="modal-next" class="next-button">Igen</a>
+              <button data-close-button class="quit-button">Nem</button>
+            </div>
+          </div>
+        </div>
+        <div id="overlay"></div>
+
+        <div class="ctn-video">
+          <video id="video" class="video" controls>
+            <source src="./video/intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div id="open-menu" class="open-menu" style="display: none;">
+          <a href="./game/menu.html" id="open-menu" class="cta-next">Tovább</a>
+        </div>
+      </section>
+
+      <img class="back_0" src="../img/circle_1.png" alt="" />
+      <img class="back_1" src="../img/circle_2.png" alt="" />
+      <img class="back_2" src="../img/circle_2.png" alt="" />
+      <img class="back_3" src="../img/tri_2.png" alt="" />
+      <img class="back_4" src="../img/square.png" alt="" />
+    </main>
+  </body>
+</html>

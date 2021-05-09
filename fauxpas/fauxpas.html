@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Faux Pas</title>
+    <!--CSS-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="../css/background.css" />
+    <link rel="stylesheet" href="../css/fauxpas.css" />
+
+    <!-- JS -->
+    <script
+      src="https://rawgit.com/theraot/emoji/master/emoji.js"
+      charset="utf-8"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./fauxpas.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img
+          src="../img/logo_2.png"
+          alt="logo"
+          onclick="location.href='../index.html';"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section id="screen-main" class="screen_main">
+        <div class="title">
+          <h1><em>Valós-látszólagos érzelmek</em></h1>
+        </div>
+
+        <div class="cancel">
+          <a href="../index.html" class="cancel-link"
+            ><span><img src="./img/cancel.png" alt="" /></span
+          ></a>
+        </div>
+
+        <div class="container">
+          <div id="question-container" class="hide">
+            <audio id="audio-fail">
+              <source src="" type="audio/mpeg" />
+            </audio>
+            <button id="play" class="media">Play</button>
+            <button id="pause" class="media">Stop</button>
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-line">
+              <button class="btn">Answer 1</button>
+              <button class="btn">Answer 2</button>
+              <button class="btn">Answer 3</button>
+              <button class="btn">Answer 4</button>
+            </div>
+          </div>
+          <div id="question-container-2" class="hide">
+            <div id="question-2">Question</div>
+            <div id="answer-buttons-2" class="btn-line">
+              <button class="btn">Answer 1</button>
+              <button class="btn">Answer 2</button>
+              <button class="btn">Answer 3</button>
+              <button class="btn">Answer 4</button>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Tovább</button>
+          </div>
+        </div>
+        <div class="ctn-info">
+          <button id="info" class="info">
+            <span><img src="./img/info.png" alt="info" /></span>
+          </button>
+        </div>
+      </section>
+
+      <section id="screen-info" class="screen_info" style="display: none">
+        <div class="game-info">
+          <h1>Játékleírás</h1>
+          <br />
+          <p>
+            Ez a feladat igazából egy játékos teszt, ami a valós és látszólagos
+            érzelmeket méri fel. A játék során két szöveget lehet lejátszani
+            majd. Mindkét történet után megjelenik egy két kérdésből álló
+            kérdőív, ahol arra a fejre kell kattintani, amilyen érzelmet a
+            kérdés kiváltott a hallott szöveg alapján.
+          </p>
+          <br />
+          <h3>Játék menete</h3>
+          <p>
+            A játék elíndítása után a Play gombbal lehet elindítani a szöveget,
+            majd válaszolni kell a feltett kérdésekre. Miután mind a két kérdést
+            megválaszoltátok, a Tovább gombbal tudtok a következő szöveghez
+            ugorni. Miután véget ért a játék, újra tudjátok kezdeni azt új
+            történetekkel és új kérdésekkel.
+          </p>
+          <br />
+          <h3>Jó szórakozást!</h3>
+          <button id="cancel-info" class="cancel-info">
+            <span><img src="./img/cancel.png" alt="" /></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- BACKGROUND -->
+      <img class="back_0" src="../img/circle_1.png" alt="" />
+      <img class="back_1" src="../img/circle_2.png" alt="" />
+      <img class="back_2" src="../img/circle_2.png" alt="" />
+      <img class="back_3" src="../img/tri_2.png" alt="" />
+      <img class="back_4" src="../img/square.png" alt="" />
+    </main>
+  </body>
+</html>

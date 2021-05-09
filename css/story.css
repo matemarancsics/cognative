@@ -1,0 +1,272 @@
+.screen_home,
+.screen_intro {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  min-height: 80vh;
+  align-items: center;
+  flex: 1;
+  background-color: rgb(242, 250, 253);
+  margin-bottom: 10px;
+}
+.introduction {
+  flex: 1;
+  padding-left: 15%;
+}
+.intro-text h1 {
+  font-size: 44px;
+  font-weight: 500;
+  background: linear-gradient(to right, #3b5885, #87c1e2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intro-text p {
+  margin-top: 5px;
+  font-size: 22px;
+  color: #585772;
+}
+.cta {
+  padding: 0% 10% 0% 0%;
+  margin-left: 10%;
+}
+.cta-start {
+  background: #00d800;
+  width: 50%;
+  cursor: pointer;
+  font-size: 100%;
+  border: none;
+  color: white;
+  margin: 10% 0% 0% 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.cover {
+  flex: 2;
+  display: flex;
+  justify-content: start;
+  height: 60vh;
+}
+.cover img {
+  height: 100%;
+  filter: drop-shadow(0px 5px 3px black);
+  animation: drop 1.5s ease;
+}
+.ctn-video {
+  align-items: center;
+  margin-left: 15%;
+}
+.video {
+  position: relative;
+  width: 80%;
+}
+.cancel {
+  position: absolute;
+  width: 20%;
+  top: 10%;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+.cancel-link {
+  width: 100%;
+  border: none;
+  background-color: rgb(242, 250, 253);
+}
+.cancel-link img {
+  width: 15%;
+}
+.skip {
+  position: absolute;
+  width: 8%;
+  top: 12%;
+  left: 82%;
+  align-items: center;
+}
+.skip-button {
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: rgb(242, 250, 253);
+}
+.skip img {
+  width: 40%;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.modal-body {
+  padding: 10px 15px;
+}
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.open-menu {
+  position: absolute;
+  bottom: 12%;
+  right: 12%;
+  margin-bottom: 1%;
+}
+.cta-next {
+  background: #00d800;
+  width: 100%;
+  cursor: pointer;
+  font-size: 120%;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: 2% 2% 2% 2%;
+}
+.next-button,
+.quit-button {
+  background: #00d800;
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 100%;
+  padding: 2% 2% 2% 2%;
+}
+.quit-button {
+  background: red;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .cover img {
+    width: 70%;
+    height: 70%;
+  }
+  .back_1,
+  .back_2,
+  .back_0 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .cover {
+    justify-content: center;
+    margin-top: 20%;
+    flex: 1;
+  }
+  .cover img {
+    width: 70%;
+    height: 70%;
+  }
+  .introduction {
+    flex: 1;
+    padding-left: 10%;
+  }
+  .intro-text h1 {
+    font-size: 34px;
+    font-weight: 400;
+  }
+  .intro-text p {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .introduction {
+    position: absolute;
+    top: 8%;
+    left: 30%;
+    padding-left: 0%;
+  }
+  .cover {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+  }
+  .intro-text h1 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .intro-text p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .screen_home,
+  .screen_intro {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+  header {
+    display: none;
+  }
+  .back_1,
+  .back_2,
+  .back_3,
+  .back_4,
+  .back_0 {
+    display: none;
+  }
+  .cancel {
+    width: 20%;
+    top: 5%;
+  }
+  .cancel-link img {
+    width: 30%;
+  }
+  .skip {
+    width: 8%;
+    top: 5%;
+  }
+  .skip img {
+    width: 80%;
+  }
+}

@@ -1,0 +1,17 @@
+@media screen and (max-width: 440px) {
+  section {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+  }
+  header {
+    display: none;
+  }
+  .back_1,
+  .back_2,
+  .back_3,
+  .back_4,
+  .back_0 {
+    display: none;
+  }
+}
