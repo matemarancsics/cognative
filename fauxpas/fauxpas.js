@@ -4,6 +4,7 @@ const startButton = document.getElementById("start-btn");
 const nextButton = document.getElementById("next-btn");
 const playButton = document.getElementById("play");
 const pauseButton = document.getElementById("pause");
+const stopButton = document.getElementById("stop");
 const infoButton = document.getElementById("info");
 const quitInfoButton = document.getElementById("cancel-info");
 const questionContainerElement = document.getElementById("question-container");
@@ -18,6 +19,8 @@ const answerButtonsElement2 = document.getElementById("answer-buttons-2");
 let shuffledQuestions, currentQuestionIndex, counter, guide;
 var arrOfAnswers = [];
 var arrOfQuestions = [];
+var randAudio = 0;
+let isPlaying = false;
 
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
@@ -28,6 +31,7 @@ nextButton.addEventListener("click", () => {
 });
 playButton.addEventListener("click", play);
 pauseButton.addEventListener("click", pause);
+stopButton.addEventListener("click", stop);
 infoButton.addEventListener("click", info);
 quitInfoButton.addEventListener("click", quitInfo);
 
@@ -126,14 +130,26 @@ function clearStatusClass(element) {
 }
 
 function play(e) {
-  var rand = Math.floor(Math.random() * src.length);
-  $("#audio-fail source").attr("src", src[rand]);
+  randAudio = Math.floor(Math.random() * src.length);
+  $("#audio-fail source").attr("src", src[randAudio]);
   $("#audio-fail")[0].load();
   $("#audio-fail")[0].play();
+  isPlaying = true;
 }
 
 function pause(e) {
+  if (isPlaying) {
+    $("#audio-fail")[0].pause();
+    isPlaying = false;
+  } else {
+    $("#audio-fail")[0].play();
+    isPlaying = true;
+  }
+}
+
+function stop(e) {
   $("#audio-fail")[0].pause();
+  isPlaying = false;
 }
 
 function info() {

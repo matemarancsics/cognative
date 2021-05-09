@@ -4,6 +4,7 @@
 function dragNdrop() {
   const list_items = document.querySelectorAll(".list-item");
   const lists = document.querySelectorAll(".list");
+  const touchBox = document.getElementById("picked");
 
   let draggedItem = null;
 
@@ -22,6 +23,50 @@ function dragNdrop() {
         draggedItem.style.display = "block";
         draggedItem = null;
       }, 0);
+    });
+
+    item.addEventListener("click", function () {
+      isDraggable = true;
+    });
+
+    item.addEventListener(
+      "touchmove",
+      function (event) {
+        if (isDraggable) {
+          console.log(event);
+          var touch = event.targetTouches[0];
+          draggedItem = item;
+
+          // Place element where the finger is
+          item.style.position = "absolute";
+          item.style.width = "20%";
+          item.style.left = touch.pageX - 25 + "px";
+          item.style.top = touch.pageY - 25 + "px";
+          event.preventDefault();
+        } else {
+          isDraggable = false;
+        }
+      },
+      false
+    );
+
+    item.addEventListener("touchend", function (e) {
+      if (draggedItem != null) {
+        draggedLeft = parseInt(draggedItem.style.left, 10);
+        draggedTop = parseInt(draggedItem.style.top, 10);
+        if (
+          draggedLeft > touchBox.offsetLeft &&
+          draggedTop > touchBox.offsetTop
+        ) {
+          const picked = draggedItem;
+          picked.draggable = false;
+          picked.style.display = "block";
+          picked.style.position = "";
+          picked.style.width = "50%";
+          $("#picked").append(picked);
+          isDraggable = false;
+        }
+      }
     });
 
     for (let j = 0; j < lists.length; j++) {

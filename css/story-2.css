@@ -95,7 +95,8 @@
   width: 100%;
   overflow-x: scroll;
 }
-.lists .list {
+.lists .list,
+.lists .cat-list {
   display: grid;
   grid-template-columns: repeat(2, auto);
   flex: 1;
@@ -105,7 +106,7 @@
   max-width: 43%;
   height: 100%;
   min-height: 200px;
-  max-height: 250px;
+  max-height: 220px;
 
   background-color: rgba(0, 0, 0, 0.1);
   margin: 0 10px;
@@ -122,7 +123,7 @@
   width: 100%;
   max-width: 70%;
   height: 15%;
-  min-height: 15%;
+  min-height: 20%;
   max-height: 20%;
 
   background-color: rgba(0, 0, 0, 0.1);
@@ -130,7 +131,8 @@
   padding: 8px;
   transition: all 0.2s linear;
 }
-.lists .list .list-item {
+.lists .list .list-item,
+.lists .cat-list .cat-list-item {
   background-color: #f3f3f3;
   border-radius: 8px;
   padding: 15px 20px;
@@ -195,7 +197,8 @@
 }
 
 @media screen and (max-width: 825px) {
-  .lists .list {
+  .lists .list,
+  .lists .cat-list {
     grid-template-columns: repeat(1, auto);
   }
   #picked {
@@ -240,11 +243,18 @@
     width: 70%;
   }
   #picked {
-    bottom: 2%;
+    bottom: 1%;
   }
   .activate {
     width: 20%;
     top: 90%;
     right: 2%;
+  }
+  .img-viewer img {
+    width: 75%;
+    left: 13%;
+  }
+  .next {
+    left: 70%;
   }
 }

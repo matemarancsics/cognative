@@ -57,7 +57,19 @@ body {
   box-shadow: 0 0 10px 2px;
 }
 .media {
-  margin-bottom: 20px;
+  width: 20%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin-bottom: 10px;
+}
+.media button {
+  border: none;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}
+.media img {
+  width: 50%;
 }
 .btn-line {
   display: grid;
@@ -197,6 +209,12 @@ body {
   .game-info p {
     font-size: 12px;
   }
+  .media {
+    width: 30%;
+  }
+  .media img {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 440px) {
@@ -247,5 +265,12 @@ body {
   .back_4,
   .back_0 {
     display: none;
+  }
+  .media {
+    width: 40%;
+    gap: 10%;
+  }
+  .media img {
+    width: 90%;
   }
 }

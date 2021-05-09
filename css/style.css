@@ -223,6 +223,7 @@ header {
   .round-button a {
     font-size: 8px;
   }
+  .back_0,
   .back_1,
   .back_2 {
     display: none;
