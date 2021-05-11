@@ -29,9 +29,16 @@
   margin-top: 10%;
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 775px) {
   .info {
-    margin-left: 15%;
+    margin-left: 10%;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 603px) {
+  .info {
+    margin-left: 13%;
     width: 50%;
   }
   .info h1,
@@ -44,5 +51,14 @@
   }
   .info p {
     font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .info {
+    margin-left: 5%;
+  }
+  .info p {
+    font-size: 50%;
   }
 }

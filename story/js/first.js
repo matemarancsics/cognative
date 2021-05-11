@@ -229,7 +229,12 @@ function nextImg() {
   if (imgCounter == player1Img.length - 1) {
     imgNext.style.display = "none";
     questionMark.style.display = "none";
-    imgTitle.style.marginTop = "35%";
+    if (screen.height > screen.width) {
+      imgTitle.style.marginTop = "35%";
+    } else {
+      imgTitle.style.marginTop = "0%";
+      imgTitle.style.marginBottom = "10%";
+    }
   }
   if (imgCounter < player1Img.length - 1) {
     showHelp(helps);
