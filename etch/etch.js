@@ -59,7 +59,7 @@ function resize() {
 }
 
 function draw(e) {
-  //ctx.beginPath();
+  ctx.beginPath();
 
   ctx.lineWidth = 2;
   ctx.lineCap = "round";

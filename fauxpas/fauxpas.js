@@ -21,6 +21,7 @@ var arrOfAnswers = [];
 var arrOfQuestions = [];
 var randAudio = 0;
 let isPlaying = false;
+var click = 0;
 
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
@@ -46,6 +47,19 @@ function startGame() {
   questionContainerElement.classList.remove("hide");
   questionContainerElement2.classList.remove("hide");
   $("#audio-fail")[0].pause();
+  //A történet lejátszása után jelennek csak meg a kérdések és a válaszok
+  //Tesztelés és bemutatás miatt került kikommentezésre
+  /*questionElement.style.visibility = "hidden";
+  questionElement2.style.visibility = "hidden";
+  answerButtonsElement.style.visibility = "hidden";
+  answerButtonsElement2.style.visibility = "hidden";
+  $("#audio-fail").on("ended", function () {
+    questionElement.style.visibility = "";
+    questionElement2.style.visibility = "";
+    answerButtonsElement.style.visibility = "";
+    answerButtonsElement2.style.visibility = "";
+    setNextQuestion();
+  });*/
   setNextQuestion();
 }
 
@@ -94,20 +108,25 @@ function resetState() {
 }
 
 function selectAnswer(e) {
+  var prev = e.target;
+  click++;
+  if (e.target.parentElement == prev.parentElement) {
+    console.log("double");
+  }
   const selectedButton = e.target;
   selectedButton.dataset.correct = true;
   if (selectedButton.dataset.correct) {
     guide++;
     arrOfAnswers.push(selectedButton.innerText);
   }
-  const correct = selectedButton.dataset.correct;
-  setStatusClass(document.body, correct);
-  Array.from(answerButtonsElement.children).forEach((button) => {
+  setStatusClass(selectedButton, selectedButton.dataset.correct);
+  //const correct = selectedButton.dataset.correct;
+  /*Array.from(answerButtonsElement.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
   });
   Array.from(answerButtonsElement2.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
-  });
+  });*/
   if (counter == 1 && guide % 2 == 0) {
     startButton.innerText = "Újrakezdés";
     startButton.classList.remove("hide");

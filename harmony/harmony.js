@@ -22,19 +22,24 @@ playButton.addEventListener("click", () => {
   if (counter % 3 == 0) {
     document.getElementById("second-ctn").style.visibility = "hidden";
     document.getElementById("first-ctn").style.visibility = "";
+    document.getElementById("first-ctn").style.borderColor = "orange";
+    document.getElementById("second-ctn").style.borderColor = "";
   }
   if (counter % 3 == 1) {
     document.getElementById("first-ctn").style.visibility = "hidden";
     document.getElementById("second-ctn").style.visibility = "";
+    document.getElementById("second-ctn").style.borderColor = "orange";
+    document.getElementById("first-ctn").style.borderColor = "";
   }
   if (counter % 3 == 2) {
     document.getElementById("first-ctn").style.visibility = "";
     document.getElementById("second-ctn").style.visibility = "";
+    document.getElementById("first-ctn").style.borderColor = "orange";
+    document.getElementById("second-ctn").style.borderColor = "orange";
   }
   playButton.style.visibility = "hidden";
   $("#loop-img").attr("src", "./img/loop.png");
   counter++;
-  isPlayed = true;
 });
 loopButton.addEventListener("click", () => {
   playAudio(counter - 1);
@@ -57,6 +62,17 @@ function quit() {
   $("#img-active-1").attr("src", "./img/active.png");
   $("#img-active-2").attr("src", "./img/active.png");
   counter = 0;
+  clicks = 0;
+  prevClick = 0;
+  answerCount = 0;
+  teamCount = 0;
+  soundCount = 0;
+  playButton.style.visibility = "";
+  isPlayed = false;
+  document.getElementById("first-ctn").style.visibility = "";
+  document.getElementById("second-ctn").style.visibility = "";
+  document.getElementById("first-ctn").style.borderColor = "black";
+  document.getElementById("second-ctn").style.borderColor = "black";
 }
 
 function quitInfo() {
@@ -79,8 +95,6 @@ const leftArrow2 = document.getElementById("left-2");
 const rightArrow2 = document.getElementById("right-2");
 const avatarImg1 = document.getElementById("avatar-img-1");
 const avatarImg2 = document.getElementById("avatar-img-2");
-const active1 = document.getElementById("active-1");
-const active2 = document.getElementById("active-2");
 
 var avatar1 = "./img/player_1.png";
 var avatar2 = "./img/player_2.png";
@@ -93,14 +107,6 @@ leftArrow1.addEventListener("click", pickAvatar1Left);
 rightArrow1.addEventListener("click", pickAvatar1Right);
 leftArrow2.addEventListener("click", pickAvatar2Left);
 rightArrow2.addEventListener("click", pickAvatar2Right);
-active1.addEventListener("click", () => {
-  console.log(currAvatar1);
-  $("#img-active-1").attr("src", "./img/inactive.png");
-});
-active2.addEventListener("click", () => {
-  console.log(currAvatar2);
-  $("#img-active-2").attr("src", "./img/inactive.png");
-});
 
 function pickAvatar1Right() {
   $("#img-active-1").attr("src", "./img/active.png");
@@ -189,6 +195,7 @@ function playAudio(index) {
   audio.loop = false;
   audio.src = playlist[index];
   audio.play();
+  isPlayed = true;
 }
 
 function playSound(array, index) {

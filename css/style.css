@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
+  overflow: scroll;
 }
 button {
   font-family: "Poppins", sans-serif;
@@ -170,6 +170,9 @@ header {
   .games {
     width: 80%;
   }
+  .round-button {
+    width: 25%;
+  }
 }
 
 @media screen and (max-width: 880px) {
@@ -177,10 +180,8 @@ header {
     min-height: 130vh;
   }
   .games {
-    flex-direction: column;
     position: absolute;
     top: 13%;
-    left: 40%;
   }
   .harmony,
   .story,
@@ -193,16 +194,53 @@ header {
   }
   .intro {
     position: absolute;
-    bottom: 90%;
+    top: -8%;
   }
   .intro-text h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .intro-text p {
-    font-size: 18px;
+    font-size: 16px;
   }
   .round-button a {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .games {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    left: 0%;
+    top: 17%;
+  }
+  .harmony,
+  .story,
+  .etch,
+  .fauxpas {
+    border: 1px dashed blue;
+    height: 50px;
+  }
+  .round-button {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 505px) {
+  .games {
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    left: 13%;
+    top: 10%;
+  }
+  .round-button {
+    width: 40%;
   }
 }
 

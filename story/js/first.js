@@ -202,11 +202,19 @@ const questionMark = document.getElementById("help");
 const header = document.getElementById("header");
 
 let imgCounter = 0;
+let isHelp = false;
 
 imgNext.addEventListener("click", nextImg);
 questionMark.addEventListener("click", () => {
-  listCtn.style.visibility = "";
-  helpCtn.style.visibility = "";
+  if (!isHelp) {
+    listCtn.style.visibility = "";
+    helpCtn.style.visibility = "";
+    isHelp = true;
+  } else {
+    listCtn.style.visibility = "hidden";
+    helpCtn.style.visibility = "hidden";
+    isHelp = false;
+  }
 });
 
 function game() {

@@ -61,10 +61,9 @@
 }
 .cancel {
   position: absolute;
-  width: 20%;
-  top: 10%;
-  margin-left: 1%;
-  margin-top: 1%;
+  width: 5%;
+  top: 12%;
+  left: 85%;
 }
 .cancel-link {
   width: 100%;
@@ -72,13 +71,13 @@
   background-color: rgb(242, 250, 253);
 }
 .cancel-link img {
-  width: 15%;
+  width: 50%;
 }
 .skip {
   position: absolute;
-  width: 8%;
+  width: 3%;
   top: 12%;
-  left: 82%;
+  left: 80%;
   align-items: center;
 }
 .skip-button {
@@ -88,7 +87,7 @@
   background-color: rgb(242, 250, 253);
 }
 .skip img {
-  width: 40%;
+  width: 85%;
 }
 .modal {
   position: fixed;
@@ -258,6 +257,7 @@
   .cancel {
     width: 20%;
     top: 5%;
+    left: 90%;
   }
   .cancel-link img {
     width: 30%;
